@@ -1,0 +1,27 @@
+.form {
+  border-radius: 10px;
+  background-color: rgb(212, 218, 228);
+  margin: 2rem;
+  width: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+mat-form-field {
+  margin: 2rem;
+}
+
+.btn-back {
+  text-align: end;
+}
+
+.text-update {
+  margin: 1rem;
+  text-align: center;
+}
+
+.btn-update {
+  background-color: rgb(113, 130, 156);
+  color: white;
+}

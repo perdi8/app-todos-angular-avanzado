@@ -1,0 +1,130 @@
+<div class="container">
+  <mat-card class="example-card">
+    <form [formGroup]="loginForm" (submit)="login()">
+      <div>
+        <mat-card-header>
+          <mat-card-title>Login</mat-card-title>
+        </mat-card-header>
+      </div>
+
+      <mat-card-content>
+        <div class="username-input">
+          <mat-form-field appearance="fill" class="username">
+            <mat-label>Enter your username</mat-label>
+            <input matInput formControlName="username" />
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field>
+          <div
+            *ngIf="
+              username != null &&
+              username.invalid &&
+              (username.dirty || username.touched)
+            "
+          >
+            <div *ngIf="username.errors" style="color: red">
+              Username is required.
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <mat-form-field appearance="fill" class="password">
+            <mat-label>Enter your password</mat-label>
+            <input
+              matInput
+              formControlName="password"
+              [type]="hide ? 'password' : 'text'"
+            />
+            <button
+              mat-icon-button
+              matSuffix
+              (click)="hide = !hide"
+              [attr.aria-label]="'Hide password'"
+              [attr.aria-pressed]="hide"
+            >
+              <mat-icon>{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
+            </button>
+          </mat-form-field>
+          <div
+            *ngIf="
+              password != null &&
+              password.invalid &&
+              (password.dirty || password.touched)
+            "
+          >
+            <div *ngIf="password.errors" style="color: red">
+              Password is required.
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <mat-card-actions>
+            <button
+              mat-raised-button
+              color="primary"
+              type="submit"
+              [disabled]="loginForm.invalid"
+              class="btn-login"
+            >
+              Login
+            </button>
+          </mat-card-actions>
+        </div>
+      </mat-card-content>
+
+      <div>
+        <mat-card-actions>
+          <a [routerLink]="['/register']"> Create Account </a>
+        </mat-card-actions>
+      </div>
+    </form>
+  </mat-card>
+</div>
+<!--
+<div class="container" >
+  <mat-card class="example-card">
+
+    <div>
+    <mat-card-header>
+      <mat-card-title class="login">Login</mat-card-title>
+    </mat-card-header>
+  </div>
+
+  <form #loginForm="ngForm">
+    <mat-card-content>
+      <div>
+      <mat-form-field appearance="fill" class="username">
+        <mat-label>Enter your username</mat-label>
+        <input name="username" matInput placeholder="Placeholder" [(ngModel)]="modelLogin.username" required #username="ngModel">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      </mat-form-field>
+
+      <div *ngIf="username.invalid && username.touched">
+        El nombre es obligatorio
+      </div>
+
+    </div>
+
+    <div>
+      <mat-form-field appearance="fill" class="password">
+        <mat-label>Enter your password</mat-label>
+
+        <input name="password" matInput [type]="hide ? 'password' : 'text'" [(ngModel)]="modelLogin.password" required minlength="6" #password="ngModel">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field>
+        <div *ngIf="password.invalid && password.touched">la contraseña es obligatoria</div>
+    </div>
+    </mat-card-content>
+
+    <div>
+       <mat-card-actions>
+          <button class="btn-login" mat-raised-button color="primary" [disabled]="loginForm.invalid"  (click)="login()">Login</button>
+      </mat-card-actions>
+    </div>
+  </form>
+
+  </mat-card>
+</div> -->

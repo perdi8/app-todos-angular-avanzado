@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="contact-list">
+    <mat-card class="example-card">
+      <img
+        class="img-contact-list"
+        mat-card-image
+        src="https://www.mdirector.com/wp-content/uploads/2014/08/Lista-de-suscriptores-de-email-marketing.jpg"
+        alt="Photo of a Shiba Inu"
+      />
+
+      <mat-card-actions>
+        <button mat-raised-button color="warn" [routerLink]="['/contacts']">
+          Go To Contacts
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+  <div class="task-list">
+    <mat-card class="example-card">
+      <img
+        class="img-task-list"
+        mat-card-image
+        src="https://blog.hotmart.com/blog/2019/05/gerenciamento-de-tarefas.png"
+        alt="Photo of a Shiba Inu"
+      />
+
+      <mat-card-actions>
+        <button mat-raised-button color="primary" [routerLink]="['/todos']">
+          Go To Tasks
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>

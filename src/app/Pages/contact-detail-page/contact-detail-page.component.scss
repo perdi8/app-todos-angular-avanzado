@@ -1,0 +1,25 @@
+.container {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+mat-form-field {
+  width: 100vh;
+}
+
+img {
+  border-radius: 10px;
+}
+
+.btn-update-back {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.btn-back {
+  background-color: #176fa6;
+  color: white;
+}

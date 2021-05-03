@@ -1,0 +1,63 @@
+<div class="btn-back">
+  <button mat-raised-button color="primary" (click)="returnBack()">
+    Go Back to Contacts
+  </button>
+</div>
+<form [formGroup]="detailsForm" (submit)="submitDetailsForm()" class="form">
+  <mat-form-field>
+    <input
+      matInput
+      placeholder="Title"
+      formControlName="title"
+      [(ngModel)]="task.title"
+    />
+  </mat-form-field>
+
+  <mat-form-field>
+    <input
+      matInput
+      placeholder="Description"
+      formControlName="description"
+      [(ngModel)]="task.description"
+    />
+  </mat-form-field>
+
+  <mat-form-field>
+    <input
+      matInput
+      placeholder="Responsable"
+      formControlName="responsable"
+      [(ngModel)]="task.responsable"
+    />
+  </mat-form-field>
+
+  <mat-form-field>
+    <input
+      matInput
+      placeholder="InitialDate"
+      formControlName="initialDate"
+      type="date"
+      [(ngModel)]="task.initialDate"
+    />
+  </mat-form-field>
+
+  <mat-form-field>
+    <input
+      matInput
+      placeholder="FinalDate"
+      formControlName="finalDate"
+      type="date"
+      [(ngModel)]="task.finalDate"
+    />
+  </mat-form-field>
+  <div class="text-update">
+    <button
+      class="btn-update"
+      mat-raised-button
+      color="secondary"
+      type="submit"
+    >
+      Update
+    </button>
+  </div>
+</form>

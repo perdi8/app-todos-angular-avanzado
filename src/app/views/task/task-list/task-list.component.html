@@ -1,0 +1,58 @@
+<div class="container">
+  <mat-card>
+    <form class="form">
+      <mat-form-field>
+        <mat-label for="title">Title:</mat-label>
+        <input
+          matInput
+          class="form-control"
+          name="title"
+          type="text"
+          [(ngModel)]="title"
+        />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label for="description">Description:</mat-label>
+        <input
+          matInput
+          class="form-control"
+          name="description"
+          type="text"
+          [(ngModel)]="description"
+        />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label for="urgencia">Urgency:</mat-label>
+        <input
+          matInput
+          class="form-control"
+          name="urgencia"
+          type="number"
+          max="5"
+          min="1"
+          [(ngModel)]="urgencia"
+        />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label for="final date">Date:</mat-label>
+        <input
+          matInput
+          class="form-control"
+          name="date"
+          type="date"
+          [(ngModel)]="finalDate"
+        />
+      </mat-form-field>
+      <div class="input-group-append">
+        <button mat-raised-button (click)="crearTarea()">Create Task</button>
+      </div>
+    </form>
+  </mat-card>
+  <app-task
+    (eventEmitterTaskDetail)="eventEmitterTaskDetail($event)"
+    (eventEmitterTaskDelete)="eventEmitterTaskDelete($event)"
+    *ngFor="let item of taskList; let i = index"
+    [tarea]="item"
+  >
+  </app-task>
+</div>

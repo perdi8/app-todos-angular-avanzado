@@ -1,0 +1,25 @@
+<div class="d-flex flex-row justify-content-between">
+  <mat-card [style.background]="getColor()" class="alert">
+    <mat-card-header>
+      <mat-card-title>{{ tarea.title }}</mat-card-title>
+      <mat-card-subtitle
+        ><h3>
+          Responsable: <strong>{{ tarea.responsable }}</strong>
+        </h3>
+      </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p><strong>Descripción: </strong>{{ tarea.description }}</p>
+      <p><strong>Inicio de Tarea:</strong> {{ tarea.initialDate }}</p>
+      <p><strong>Última actualización: </strong> {{ tarea.finalDate }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="success" (click)="onNavigate()">
+        Go to Detail
+      </button>
+      <button class="btn-delete" mat-raised-button (click)="deleteTask()">
+        Delete
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

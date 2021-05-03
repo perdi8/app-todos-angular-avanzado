@@ -1,0 +1,24 @@
+table {
+  width: 100vh;
+}
+
+.img-avatar {
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.btn-detail {
+  background-color: #17a6a6;
+  color: white;
+}
+
+.btn-home-container {
+  margin: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-home {
+  background-color: #176fa6;
+  color: white;
+}

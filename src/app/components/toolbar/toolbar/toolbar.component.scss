@@ -1,0 +1,35 @@
+$Geneva: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$px: 18px;
+$marginItems: 0 20px;
+.toolbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: #1976d2;
+  color: white;
+  font-weight: 600;
+}
+
+.toolbar img {
+  margin: $marginItems;
+}
+
+.text {
+  font-size: $px;
+  font-family: $Geneva;
+}
+
+.btn-logout-container {
+  display: flex;
+  flex-direction: flex-end;
+}
+
+.btn-logout {
+  margin: $marginItems;
+  font-size: $px;
+  font-family: $Geneva;
+}
